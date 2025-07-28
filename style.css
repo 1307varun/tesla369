@@ -69,13 +69,13 @@ nav {
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 40px;
+  gap: 30px;
+  padding: 20px;
   justify-items: center;
   justify-content: space-evenly;
 }
 .card {
-  width: 350px;
+  width: 300px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
