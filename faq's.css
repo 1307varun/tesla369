@@ -45,7 +45,7 @@ header {
   background-color: transparent;
 }
 #img {
-  height: 250px;
+  height: 300px;
 }
 
 nav {
@@ -54,11 +54,11 @@ nav {
 }
 
 .na{
-  text-decoration: none;
-  color:black;
-  padding: 25px 25px;
+  text-decoration: none;        
+  color: black;
+  padding: 25px 25px;  
   transition: background-color 0.3s ease;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .na:hover {
@@ -67,12 +67,12 @@ nav {
   color: black;
 }
 
-
 /* footer */
- .footer {
+ 
+.footer {
   background-color: #1c1c1c;
   color: white;
-  padding: 20px 20px;
+  padding: 40px 40px;
 }
 
 .footer-container {
@@ -178,6 +178,7 @@ nav {
   width: 30px;
   height: 30px;
 }
+
     .faq-container {
       max-width: 600px;
       margin: auto;
