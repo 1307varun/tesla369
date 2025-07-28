@@ -58,7 +58,7 @@ nav {
   color:black;
   padding: 25px 25px;
   transition: background-color 0.3s ease;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .na:hover {
@@ -69,71 +69,95 @@ nav {
 
 
 /* footer */
-  .footer {
-  background-color: #222;
-  color: #fff;
-  padding: 40px 20px;
-  font-family: Arial, sans-serif;
+ .footer {
+  background-color: #1c1c1c;
+  color: white;
+  padding: 20px 20px;
 }
 
 .footer-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Equal columns */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 40px;
-  max-width: 1200px;
-  margin: auto;
+}
+
+.footer-column {
+  width: 20%;
 }
 
 .footer-column h3 {
-  margin-bottom: 15px;
   font-size: 18px;
-  color: #f1c40f;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.footer-column p,
+.footer-column li {     
+  font-size: 18px;
+  line-height: 24px;
+  margin: 4px 0;
 }
 
 .footer-column ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.footer-column ul li {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.footer-column ul li::before {
+  content: "";
 }
 
-.footer-column p {
-  margin-bottom: 10px;
+.red {
+  color: red;
+  font-weight: bold;
 }
 
-.social-icons a {
-  color: #fff;
-  margin-right: 10px;
-  font-size: 28px;
-  text-decoration: none;
+.yellow {
+  color: #f3c623;
+}
+
+.social-icons {
+  margin-top: 25px;
+}
+
+.social-icons i {
+  font-size: 40px;
+  margin-right: 15px;
+  color: white;
+  cursor: pointer;
   transition: color 0.3s ease;
 }
 
-.social-icons a:hover {
-  color: #f1c40f;
+/* Facebook hover */
+.social-icons .facebook:hover i {
+  color: #3b5998; /* Facebook blue */
 }
 
-@media (max-width: 768px) {
-  .footer-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .social-icons {
-    justify-content: center;
-  }
+/* Instagram hover */
+.social-icons .instagram:hover i {
+  color: #e1306c; /* Instagram pink */
 }
+
+/* Twitter hover */
+.social-icons .twitter:hover i {
+  color: #1da1f2; /* Twitter blue */
+}
+
+/* LinkedIn hover */
+.social-icons .linkedin:hover i {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+/* Google Map */
 .map-container iframe {
   width: 100%;
   height: 200px;
   border: 0;
-  border-radius: 8px;
+  border-radius: 48px;
 }
+
+/* WhatsApp Floating Icon */
 .whatsapp-float {
   position: fixed;
   bottom: 50px;
@@ -154,62 +178,53 @@ nav {
   width: 30px;
   height: 30px;
 }
-
-  .container {
-      display: flex;
-      justify-content: center;
-      gap: 200px;
+    .faq-container {
+      max-width: 600px;
+      margin: auto;
     }
 
-    .column {
-      width: 300px;
-    }
-
-    h2 {
-      color: #004aad;
-      margin-bottom: 20px;
-      margin-left: 50px;
-    }
-
-    .faq {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    .faq-item {
+      border: 1px solid #eee;
+      border-radius: 10px;
       margin-bottom: 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
       overflow: hidden;
       transition: all 0.3s ease;
-      width: 400px;
     }
 
-    .faq-header {
-      padding: 15px 20px;
+    .faq-question {
+      padding: 20px;
       cursor: pointer;
+      font-size: 1.2rem;
+      font-weight: 500;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      /* font-weight: bold; */
     }
 
-    .faq-header:hover {
-      background-color: #f0f0f0;
+    .faq-question:hover {
+      background-color: #f9f9f9;
     }
 
-    .faq-content {
-      padding: 0 20px 15px 20px;
-      display: none;
-      color: #333;
-      border-top: 1px solid #ddd;
+    .faq-answer {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+      font-size: 1.1rem;
+      color: #444;
     }
 
-    .icon {
-      font-size: 20px;
-      transition: transform 0.5s ease;
+    .faq-answer.open {
+      padding: 15px 20px;
+      max-height: 500px;
     }
 
-    .faq.open .faq-content {
-      display: block;
+    .plus-icon {
+      font-size: 24px;
+      transition: transform 0.3s ease;
     }
 
-    .faq.open .icon {
-      transform: rotate(180deg);
+    .rotate {
+      transform: rotate(45deg);
     }
