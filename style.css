@@ -69,7 +69,7 @@ nav {
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 80px;
+  gap: 20px;
   padding: 40px;
   justify-items: center;
   justify-content: space-evenly;
