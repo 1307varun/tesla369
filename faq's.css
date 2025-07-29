@@ -68,11 +68,10 @@ nav {
 }
 
 /* footer */
- 
 .footer {
   background-color: #1c1c1c;
   color: white;
-  padding: 40px 40px;
+  padding: 30px 30px;
 }
 
 .footer-container {
@@ -178,6 +177,7 @@ nav {
   width: 30px;
   height: 30px;
 }
+
 
     .faq-container {
       max-width: 600px;
